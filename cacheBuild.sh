@@ -14,10 +14,10 @@ fi
 HASH=$(md5 ${SOURCEBUILDFILE} | rev | cut -d' ' -f1 | rev)
 if [ -e "${REPODIRECTORY}/${HASH}.gz" ]; then
     cd ${BUILDDIRECTORY}
-    tar -xzf ${REPODIRECTORY}/${HASH}.gz -C ${BUILDDIRECTORY}
+    tar -xzf ${REPODIRECTORY}/${HASH}.gz -C .
 else
     bash -c ${BUILDCOMMAND}
-    if [ $0 -ne 0 ]; then
+    if [ $? -ne 0 ]; then
         echo "The build has failed." >2
         exit 2
     fi
@@ -25,3 +25,4 @@ else
     tar -czf ${REPODIRECTORY}/${HASH}.gz.$$ .
     mv ${REPODIRECTORY}/${HASH}.gz.$$ ${REPODIRECTORY}/${HASH}.gz
 fi
+cd -
