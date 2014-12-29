@@ -10,6 +10,7 @@ Building creates vendor directories and fills them in.
 
 If you have the same recipe this implies the same vendor directories each time you build.
 While most tools can cache these vendors they do on occasion:
+
 1. Still use a boatload of cpu/memory. Even though all dependencies are already installed and haven't changed.  
 2. Don't properly use the cache/have horrible issues.
 3. Download the dependencies each time, depend very strongly on third-party servers.
