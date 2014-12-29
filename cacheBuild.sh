@@ -17,6 +17,10 @@ if [ -e "${REPODIRECTORY}/${HASH}.gz" ]; then
     tar -xzf ${REPODIRECTORY}/${HASH}.gz -C ${BUILDDIRECTORY}
 else
     bash -c ${BUILDCOMMAND}
+    if [ $0 -ne 0 ]; then
+        echo "The build has failed." >2
+        exit 2
+    fi
     cd ${BUILDDIRECTORY}
     tar -czf ${REPODIRECTORY}/${HASH}.gz.$$ .
     mv ${REPODIRECTORY}/${HASH}.gz.$$ ${REPODIRECTORY}/${HASH}.gz
