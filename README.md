@@ -20,9 +20,9 @@ This tool allows you to stash your vendors on YOUR server.
 
 `Usage: cacheBuild.sh SOURCEBUILDFILE BUILDDIRECTORY BUILDCOMMAND REPODIRECTORY"`
 
-SOURCEBUILDFILE: This is your recipe file. eg. composer.json
-BUILDDIRECTORY: This is the directory where the vendors are installed. eg. vendor
-BUILDCOMMAND: The file that contains your build command that installs the vendors. eg. build.sh
-REPODIRECTORY: Directory to store the snapshots of the vendors. eg. /mnt/myRepo. This will usually be a mount to your repository server.
++ SOURCEBUILDFILE: This is your recipe file. eg. composer.json
++ BUILDDIRECTORY: This is the directory where the vendors are installed. eg. vendor
++ BUILDCOMMAND: The file that contains your build command that installs the vendors. eg. build.sh
++ REPODIRECTORY: Directory to store the snapshots of the vendors. eg. /mnt/myRepo. This will usually be a mount to your repository server.
 
 
