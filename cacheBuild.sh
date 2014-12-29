@@ -1,5 +1,4 @@
 #!/bin/sh
-set -x
 
 SOURCEBUILDFILE=$1
 BUILDDIRECTORY=$2
